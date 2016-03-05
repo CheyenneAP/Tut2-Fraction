@@ -46,3 +46,20 @@ void Fraction::setND(int n, int d){
 void Fraction::getND(){
 	cout << num << " / " << denom << endl;
 }
+
+// add operation
+Fraction Fraction::add(Fraction c){
+	// give new var fraction format
+	Fraction ad = Fraction();
+	ad.num = (num*c.denom) + (denom*c.num);
+	ad.denom = denom*c.denom;
+	return ad;
+}
+// subtraction  operation
+Fraction Fraction::subtract(Fraction c){
+
+	Fraction ad = Fraction();
+	ad.num = (num*c.denom) - (denom*c.num);
+	ad.denom = denom*c.denom;
+	return ad;
+}
