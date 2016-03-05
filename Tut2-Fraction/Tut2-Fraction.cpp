@@ -63,3 +63,22 @@ Fraction Fraction::subtract(Fraction c){
 	ad.denom = denom*c.denom;
 	return ad;
 }
+
+
+//multiplication operation
+Fraction Fraction::multiply(Fraction c){
+	Fraction x = Fraction();
+	x.num = num*c.num;
+	x.denom = denom*c.denom;
+	return x;
+}
+
+//division  operation
+Fraction Fraction::divide(Fraction c){
+	int var = c.num;
+	c.num = c.denom;
+	c.denom = var;
+	return multiply(c);
+}
+
+
