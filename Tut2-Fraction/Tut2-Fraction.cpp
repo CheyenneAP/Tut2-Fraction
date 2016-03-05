@@ -109,3 +109,10 @@ void Fraction::printout(){
 	}
 }
 
+// display the answer 
+void Fraction::display(Fraction b){
+	cout << " the answer = " << endl;
+	b.getND();
+	b.printout();
+}
+
