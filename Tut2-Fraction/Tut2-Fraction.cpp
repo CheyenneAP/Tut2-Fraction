@@ -147,28 +147,28 @@ int main(){
 	case 1:
 		// add fractions and simplify
 
-		answer = x.add(y);
+		answer = x+y;
 		display(answer);
 
 		break;
 
 	case 2:
 		// subtract fractions and simplify
-		answer = x.subtract(y);
+		answer = x-y;
 		display(answer);
 
 		break;
 
 	case 3:
 		//multiply fractions and simplify
-		answer = x.multiply(y);
+		answer = x*y;
 		display(answer);
 
 		break;
 
 	case 4:
 		//divide fractions and simplify.
-		answer = x.divide(y);
+		answer = x/y;
 		display(answer);
 
 		break;
