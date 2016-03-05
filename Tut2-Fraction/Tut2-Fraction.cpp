@@ -4,8 +4,6 @@ using namespace std;
 void display(Fraction b);
 
 
-
-
 class Fraction{
 private:
 
@@ -57,11 +55,8 @@ Fraction Fraction::operator+ (Fraction c){
 }
 // subtraction  operation
 Fraction Fraction::operator- (Fraction c){
-
-	Fraction ad = Fraction();
-	ad.num = (num*c.denom) - (denom*c.num);
-	ad.denom = denom*c.denom;
-	return ad;
+	c.num = -c.num;
+	return operator+(c);
 }
 
 
