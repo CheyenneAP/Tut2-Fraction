@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-
+void display(Fraction b);
 
 
 
@@ -116,3 +116,70 @@ void Fraction::display(Fraction b){
 	b.printout();
 }
 
+
+///// main method following 
+int main(){
+	// create reference to the fraction class 
+	Fraction FractObj;
+	// give x and y fraction format and assign default values 
+	Fraction x = Fraction();
+	Fraction y = Fraction();
+	//variable to store the answer in a fraction format
+	Fraction answer = Fraction();
+
+	// assign default values 
+	x.setND(1, 2);
+	y.setND(3, 6);
+
+	// initialise the variable uchoice
+	int uchoice;
+	cout << "Please enter your choice of  arithmetic operations for the fractions from the options provided below" << endl;
+	cout << "1. addition" << endl;
+	cout << "2.subtraction " << endl;
+	cout << "3. Multiplication " << endl;
+	cout << "4.Division " << endl;
+
+	// accept input
+	cin >> uchoice;
+
+	switch (uchoice){
+
+	case 1:
+		// add fractions and simplify
+
+		answer = x.add(y);
+		display(answer);
+
+		break;
+
+	case 2:
+		// subtract fractions and simplify
+		answer = x.subtract(y);
+		display(answer);
+
+		break;
+
+	case 3:
+		//multiply fractions and simplify
+		answer = x.multiply(y);
+		display(answer);
+
+		break;
+
+	case 4:
+		//divide fractions and simplify.
+		answer = x.divide(y);
+		display(answer);
+
+		break;
+
+	default:
+		cout << " You have entered a value out of range" << endl;
+		cout << "please enter a value between 1 and 4" << endl;
+
+	}
+
+
+
+
+}
