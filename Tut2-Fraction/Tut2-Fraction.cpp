@@ -27,3 +27,14 @@ public:
 	void display(Fraction);
 
 };
+
+//  default constructor 
+Fraction::Fraction(){
+	num = 0;
+	denom = 1;
+}
+
+// default destructor 
+Fraction::~Fraction(){
+
+}
