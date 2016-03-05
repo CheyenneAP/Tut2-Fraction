@@ -174,6 +174,7 @@ int main(){
 		break;
 
 	default:
+		// default message 
 		cout << " You have entered a value out of range" << endl;
 		cout << "please enter a value between 1 and 4" << endl;
 
