@@ -81,4 +81,31 @@ Fraction Fraction::divide(Fraction c){
 	return multiply(c);
 }
 
+void Fraction::printout(){
+	if (num == 0){
+		num = 0;
+		cout << num << endl;
+	}
+	else{
+		for (int i = denom; i >= 1; i--) {
+			if ((denom % i == 0) && (num % i == 0)) {
+				denom = denom / i;
+				num = num / i;
+			}
+		}
+
+		int numint = (int)num / denom;
+		int remain = num%denom;
+		if (remain == 0){
+			cout << numint << endl;
+		}
+		else{
+			if (numint == 0){
+				cout << remain << "/" << denom << endl;
+			}
+
+			cout << numint << "  +  " << remain << "/" << denom << " " << endl;
+		}
+	}
+}
 
