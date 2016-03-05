@@ -6,9 +6,6 @@ using namespace std;
 
 
 
-
-
-
 class Fraction{
 private:
 
@@ -37,4 +34,15 @@ Fraction::Fraction(){
 // default destructor 
 Fraction::~Fraction(){
 
+}
+
+// give the fraction values 
+void Fraction::setND(int n, int d){
+	num = n;
+	denom = d;
+}
+
+// output the fraction int the correct format
+void Fraction::getND(){
+	cout << num << " / " << denom << endl;
 }
