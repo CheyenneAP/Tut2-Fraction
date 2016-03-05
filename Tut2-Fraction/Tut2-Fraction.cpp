@@ -14,10 +14,10 @@ private:
 public:
 	void setND(int n, int d);
 	void getND();
-	Fraction add(Fraction);
-	Fraction subtract(Fraction);
-	Fraction multiply(Fraction);
-	Fraction divide(Fraction);
+	Fraction operator+(Fraction);
+	Fraction operator- (Fraction);
+	Fraction operator* (Fraction);
+	Fraction operator/ (Fraction);
 	Fraction(void);
 	~Fraction(void);
 	void printout();
@@ -48,7 +48,7 @@ void Fraction::getND(){
 }
 
 // add operation
-Fraction Fraction::add(Fraction c){
+Fraction Fraction::operator+ (Fraction c){
 	// give new var fraction format
 	Fraction ad = Fraction();
 	ad.num = (num*c.denom) + (denom*c.num);
@@ -56,7 +56,7 @@ Fraction Fraction::add(Fraction c){
 	return ad;
 }
 // subtraction  operation
-Fraction Fraction::subtract(Fraction c){
+Fraction Fraction::operator- (Fraction c){
 
 	Fraction ad = Fraction();
 	ad.num = (num*c.denom) - (denom*c.num);
@@ -66,19 +66,19 @@ Fraction Fraction::subtract(Fraction c){
 
 
 //multiplication operation
-Fraction Fraction::multiply(Fraction c){
-	Fraction x = Fraction();
-	x.num = num*c.num;
-	x.denom = denom*c.denom;
-	return x;
+Fraction Fraction::operator* (Fraction c){
+	Fraction p = Fraction();
+	p.num = num*c.num;
+	p.denom = denom*c.denom;
+	return p;
 }
 
 //division  operation
-Fraction Fraction::divide(Fraction c){
+Fraction Fraction::operator/ (Fraction c){
 	int var = c.num;
 	c.num = c.denom;
 	c.denom = var;
-	return multiply(c);
+	return operator* (c);
 }
 
 void Fraction::printout(){
